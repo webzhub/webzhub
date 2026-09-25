@@ -166,7 +166,6 @@ footer{border-top:1px solid var(--line);padding:55px 0 30px}.footer-top{display:
           </div></div>
           <input type="hidden" id="website" name="website">
           <div class="field full"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+91 98765 43210" required></div>
-          <div class="field full"><label for="estimatedBudget">Estimated budget</label><select id="estimatedBudget" name="estimatedBudget" required><option value="">Select a range</option><option>Below ₹2,000</option><option>₹2,000 – ₹5,000</option><option>₹5,000 – ₹10,000</option><option>₹10,000 – ₹25,000</option><option>₹25,000 – ₹50,000</option><option>₹50,000+</option></select></div>
         </div>
         <button class="submit" id="submitBtn" type="submit">Start a Conversation ↗</button>
         <div id="formMessage" class="form-message" role="status"></div>
@@ -251,8 +250,6 @@ form.addEventListener('submit', async (e) => {
   const email = document.getElementById('email').value.trim();
   const brandName = document.getElementById('brandName').value.trim();
   const phone = document.getElementById('phone').value.trim();
-  const estimatedBudget = document.getElementById('estimatedBudget').value;
-
   if (!selectedService) {
     showMessage('Please choose what you need help with.', 'error');
     return;
@@ -265,8 +262,7 @@ form.addEventListener('submit', async (e) => {
     timestamp: new Date().toISOString(),
     name, email, brandName,
     website: selectedService,
-    phone,
-    estimatedBudget
+    phone
   });
 
   // ChatGPT/Preview and local file previews can ask for network permission.
@@ -291,7 +287,7 @@ form.addEventListener('submit', async (e) => {
     // Keep a local backup while previewing, without triggering the network popup.
     try {
       const backup = JSON.parse(localStorage.getItem('webzhub_submissions') || '[]');
-      backup.push({ timestamp: new Date().toISOString(), name, email, brandName, website: selectedService, phone, estimatedBudget });
+      backup.push({ timestamp: new Date().toISOString(), name, email, brandName, website: selectedService, phone });
       localStorage.setItem('webzhub_submissions', JSON.stringify(backup));
     } catch (_) {}
 
