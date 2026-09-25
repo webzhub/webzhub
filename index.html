@@ -92,6 +92,16 @@ footer{border-top:1px solid var(--line);padding:55px 0 30px}.footer-top{display:
 @media (max-width:900px){.hero-grid,.form-wrap{grid-template-columns:1fr}.hero{padding-top:65px}.hero-visual{min-height:400px;order:-1}.cards{grid-template-columns:1fr 1fr}.testimonials{grid-template-columns:1fr}.footer-top{align-items:flex-start;flex-direction:column}.footer-right{text-align:left}.footer-right a{margin-left:0;margin-right:18px}}
 @media (max-width:600px){.container{width:min(calc(100% - 28px),var(--max))}.header{height:68px}main{padding-top:68px}.logo{width:125px;height:48px}.header-cta{padding:10px 14px;font-size:12px}.hero{min-height:auto;padding:75px 0 70px}h1{font-size:47px}.hero-copy{font-size:16px}.hero-visual{min-height:320px}.visual-ring{width:290px;height:290px}.float-card{padding:10px 12px}.card-one{top:12px;right:-4px}.card-two{bottom:20px;left:-4px}.logo-card{width:290px;border-radius:28px}.section{padding:85px 0}.cards,.stats,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.form-card{padding:22px}.cta{padding-bottom:85px}.cta-box{padding:45px 22px;border-radius:26px}.footer-bottom{flex-direction:column}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:46px}
+.why-card{position:relative;overflow:hidden;padding:26px;border:1px solid rgba(255,255,255,.08);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));box-shadow:0 18px 50px rgba(0,0,0,.18);transition:transform .35s ease,border-color .35s ease,background .35s ease}
+.why-card::before{content:"";position:absolute;inset:-80px auto auto -80px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(36,201,255,.16),transparent 68%);pointer-events:none}
+.why-card:hover{transform:translateY(-5px);border-color:rgba(36,201,255,.24);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.022))}
+.why-icon{position:relative;width:42px;height:42px;display:grid;place-items:center;border-radius:13px;margin-bottom:22px;border:1px solid rgba(36,201,255,.22);background:rgba(36,201,255,.07);color:#8eeaff;font-size:18px;font-weight:900}
+.why-card h3{position:relative;margin:0 0 9px;font-size:18px;letter-spacing:-.02em}
+.why-card p{position:relative;margin:0;color:#98a5b7;line-height:1.7;font-size:14px}
+@media (max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.why-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body><iframe id="lead-submit-frame" name="lead-submit-frame" title="Form submission" aria-hidden="true" style="display:none;"></iframe>
@@ -139,6 +149,25 @@ footer{border-top:1px solid var(--line);padding:55px 0 30px}.footer-top{display:
       <div class="stat reveal"><strong>01</strong><span>Clear process from idea to launch</span></div>
       <div class="stat reveal"><strong>100%</strong><span>Responsive, mobile-first experience</span></div>
       <div class="stat reveal"><strong>∞</strong><span>Room for your business to grow</span></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="why-webzhub">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="kicker">Why WEB'Z'HUB</div>
+      <h2>Built with purpose. <span class="gradient">Not just decoration.</span></h2>
+      <p class="section-lead">Every website is designed to look distinctive, work smoothly, and make the next step easier for your customers.</p>
+    </div>
+    <div class="why-grid">
+      <article class="why-card reveal"><div class="why-icon">✦</div><h3>Custom design</h3><p>No generic templates. The visual direction is shaped around your brand, audience and goals.</p></article>
+      <article class="why-card reveal"><div class="why-icon">⌁</div><h3>Mobile-first</h3><p>Your website is built to feel polished and easy to use on phones, tablets and desktops.</p></article>
+      <article class="why-card reveal"><div class="why-icon">↯</div><h3>Fast-loading</h3><p>Clean, focused pages with performance in mind, so visitors can get where they need to go quickly.</p></article>
+      <article class="why-card reveal"><div class="why-icon">⌕</div><h3>SEO-ready structure</h3><p>A clear page structure and semantic foundation that gives search engines useful content to understand.</p></article>
+      <article class="why-card reveal"><div class="why-icon">↗</div><h3>Direct communication</h3><p>Work directly with WEB'Z'HUB, with clear communication instead of unnecessary layers.</p></article>
+      <article class="why-card reveal"><div class="why-icon">✓</div><h3>Launch support</h3><p>From the first screen to launch, the important details are handled so your website is ready to go live.</p></article>
     </div>
   </div>
 </section>
@@ -200,7 +229,7 @@ footer{border-top:1px solid var(--line);padding:55px 0 30px}.footer-top{display:
   <div class="container">
     <div class="footer-top">
       <div><img class="footer-logo" src="webzhub-logo-transparent.png" alt="WEB'Z'HUB"><p class="footer-copy">Websites designed from scratch to launch—built to give growing businesses a stronger presence online.</p><a class="footer-email" href="mailto:webzhub2@gmail.com">webzhub2@gmail.com ↗</a></div>
-      <div class="footer-right"><div>WEB DESIGN • DEVELOPMENT • DIGITAL EXPERIENCE</div><div style="margin-top:16px"><a href="#home">Home</a><a href="#approach">Approach</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></div></div>
+      <div class="footer-right"><div>WEB DESIGN • DEVELOPMENT • DIGITAL EXPERIENCE</div><div style="margin-top:16px"><a href="#home">Home</a><a href="#approach">Approach</a><a href="#why-webzhub">Why WEB'Z'HUB</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></div></div>
     </div>
     <div class="footer-bottom"><span>© 2026 WEB'Z'HUB. All rights reserved.</span><span>Built with purpose.</span></div>
   </div>
